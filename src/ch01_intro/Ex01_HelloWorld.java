@@ -4,7 +4,7 @@ package ch01_intro;
 public class Ex01_HelloWorld {
 		
 	/**
-	 * document 주석 - API document만들 때 사용
+	 * document 주석 - API document 만들때 사용
 	 * @param args
 	 */
 	
