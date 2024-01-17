@@ -5,14 +5,14 @@ import java.util.Arrays;
 public class Ex02_ArrayCopy {
 
 	public static void main(String[] args) {
-		int src[] = {1, 2, 4 ,8};
-		int[] dst = src;
-		System.out.println(Arrays.toString(dst));
-		
-		dst[2] = 5;
-		System.out.println(Arrays.toString(dst));
-		//Side effet(부작용) 발생 : 원치 않은 src 내용도 변경 			
-		System.out.println(Arrays.toString(src));
+//		int src[] = {1, 2, 4 ,8};		
+//		int[] dst = src; 	 
+//		System.out.println(Arrays.toString(dst));
+//		
+//		dst[2] = 5;
+//		System.out.println(Arrays.toString(dst));
+//		//Side effet(부작용) 발생 : 원치 않은 src 내용도 변경 			
+//		System.out.println(Arrays.toString(src));
 		
 		
 		int[] newSrc = {3, 4, 7, 9};

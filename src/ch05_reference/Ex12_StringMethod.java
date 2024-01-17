@@ -17,15 +17,20 @@ public class Ex12_StringMethod {
 		
 		//주민등록번호를 입력받아서 남자인지, 여자인지를 구별
 		Scanner scan = new Scanner(System.in);
-		String ssn = "010624-3123456";
-		char gender = ssn.charAt(7);
+		//
+		
+		System.out.println("주민번호를 주세요> ");
+		String inputText = scan.nextLine();
+		scan.close();
+		System.out.println();
+		char gender = inputText.charAt(7);
 		switch(gender) {
 		case '1' : case '3' :
 			System.out.println("남자"); break;
 		case '2' : case '4' :
-			System.out.println(여자); break;
-		}
-				
+			System.out.println("여자"); break;
+		}		
+					
 	}	
 
 }
