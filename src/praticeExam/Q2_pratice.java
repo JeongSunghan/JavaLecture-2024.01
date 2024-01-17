@@ -3,8 +3,11 @@ package praticeExam;
 public class Q2_pratice {
 
 	public static void main(String[] args) {
-		switch(72 / 10) {
+		int score = 72;
 		
+		switch(score / 10) {
+		
+		case 10:
 		case 9 :
 			System.out.println("A학점"); break;
 		case 8 :

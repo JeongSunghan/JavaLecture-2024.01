@@ -23,7 +23,21 @@ public class Q3_pratice {
 				break;
 			}
 			System.out.println(i);
+			
+			
+			//다른방법 1
+			for (int n = 0; ; n++) {
+				if (n > 10)
+					break;
+				if(n % 2 == 1)
+					continue;
+				System.out.println(n);
 				
+			//다른방법 2
+			for (int k = 0; k <= 10; k +=2)
+				System.out.println(k);
+				
+			}
 				
 		}
 		
