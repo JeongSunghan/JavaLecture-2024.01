@@ -10,7 +10,7 @@ public class Ex01_Array {
 		int[] score = {80, 90, 78, 93, 65};
 		//정수타입-배열-배열명 = [안에 숫자를 담음]
 		
-		char grade[] = {'B', 'A', 'C', 'A', 'D'} ;
+		char[] grade = {'B', 'A', 'C', 'A', 'D'} ;
 		//문자타입 배열명 배열 = [안에 문자를 담음]
 		
 		//배열을 생성하면서 크기를 지정하는 경우
@@ -24,7 +24,7 @@ public class Ex01_Array {
 		for (int i = 0; i < score.length; i++)		//lenght는 몇개냐 = 인덱스 갯수(스트링의 갯수)
 		//반복문 - int i는 0이고 i가 배열스코의 인덱스갯수보다 작을 때 i를 +1씩 증감
 			System.out.print(score[i] + " ");
-			//배열스코어에서 반복문을 통한 i값을 출력
+			//배열스코어에서 반복문을 통한 i값을 문자열로 출력
 			//출력 결과 i = 1일때 80, 2=>90, 3=>78 ... 5=>65 끝
 		
 		System.out.println();
