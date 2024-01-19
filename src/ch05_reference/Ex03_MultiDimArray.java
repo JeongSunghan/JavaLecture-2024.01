@@ -8,9 +8,9 @@ public class Ex03_MultiDimArray {
 		//2차원 배열(matrix)
 		int[][] matrix = new int[2][3];
 		int score[][] = {{80, 80, 70}, {85,88,72}};
-		System.out.println(Arrays.toString(score));
-		System.out.println(Arrays.toString(score[0]));
-		System.out.println(Arrays.toString(score[1]));
+		System.out.println(Arrays.toString(score));		//score의 주소출력
+		System.out.println(Arrays.toString(score[0]));		//score의 값 출력
+		System.out.println(Arrays.toString(score[1]));		//score의 값 출력
 		
 		//인덱싱
 		System.out.println(score[0][0] + ", " + score[1][1]);
