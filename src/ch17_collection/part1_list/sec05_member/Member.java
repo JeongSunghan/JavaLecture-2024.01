@@ -13,6 +13,15 @@ public class Member {
 	}
 
 	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Member) {
+			Member m = (Member) obj;
+			return this.name.equals(m.getName());
+		}
+		return false;
+	}
+	
+	@Override
 	public String toString() {
 		return "Member [age=" + age + ", name=" + name + ", gender=" + gender + "]";
 	}
