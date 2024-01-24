@@ -5,7 +5,7 @@ public class Ex01_Operation {
 	public static void main(String[] args) {
 		int i = 2, k = 3;
 		double f = k / (double) i;
-				System.out.printf("%d, %d, %d%n", k/i, i++, --k);		// 1.5, 2, 
+				System.out.printf("%d, %d, %d%n", k/i, i++, --k);		// 1.5, 2, 2
 				System.out.printf("%.1f, %d, %d%n", f, i++, --k);		//1.5, 3, 1
 				
 				char c = '안';
