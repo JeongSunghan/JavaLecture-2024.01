@@ -7,13 +7,16 @@ import java.util.List;
 import ch17_collection.part1_list.sec03_Message.Message;
 
 public class BoardDao {
-	private static List<Board> list = new ArrayList<Board>();
-	private int index = 0;
+			Board boadr1 = new Board("제목1", "내용1");
+			Board boadr2 = new Board("제목1", "내용1");
+			Board boadr3 = new Board("제목1", "내용1");
+			
 
 	public List<Board> getBoardList() {
-		list.contains(new Message(index++, "제목1", "내용1"));
-		list.contains(new Message(index++, "제목2", "내용2"));
-		list.contains(new Message(index++, "제목3", "내용3"));
+		List<Board> list = new ArrayList<>();
+		list.add(boadr1);
+		list.add(boadr2);
+		list.add(boadr3);
 		return list;
 	}
 
