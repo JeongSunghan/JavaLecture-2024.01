@@ -1,4 +1,4 @@
-package ch17_collection.part1_list;
+package ch17_collection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
