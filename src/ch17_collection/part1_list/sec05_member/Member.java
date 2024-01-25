@@ -5,7 +5,7 @@ public class Member {
 	private String name;
 	private String gender;			//남 or 여
 
-	public Member() {}
+	public Member(int i, String string) {}
 	public Member(int age, String name, String gender) {
 		this.age = age;
 		this.name = name;

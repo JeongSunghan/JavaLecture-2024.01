@@ -1,4 +1,4 @@
-package praticeExam;
+package praticeExam.Method;
 
 public class Q03_MaxPal {
 

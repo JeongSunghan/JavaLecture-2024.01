@@ -1,4 +1,4 @@
-package praticeExam;
+package praticeExam.Method;
 
 public class Q02_DigitalClock {
 	public static void main(String[] args) {
