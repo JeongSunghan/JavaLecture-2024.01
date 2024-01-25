@@ -18,12 +18,13 @@ public class Student {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null || getClass() != obj.getClass())
+		if (obj instanceof Student) {
+			Student m = (Student) obj;
+			return m.studentNum == this.studentNum;
+		}else {
 			return false;
-		Student student = (Student) obj;
-		return studentNum == student.studentNum;
+		}
+		
 
 	}
 }

@@ -19,5 +19,4 @@ public class BoardDao {
 		list.add(boadr3);
 		return list;
 	}
-
 }
