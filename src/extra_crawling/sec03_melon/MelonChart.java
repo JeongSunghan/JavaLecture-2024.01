@@ -10,7 +10,6 @@ public class MelonChart {
 	
 	public MelonChart() {}
 	public MelonChart(int rank, String title, String artist, String album, String imgSrc) {
-		super();
 		this.rank = rank;
 		this.title = title;
 		this.artist = artist;
