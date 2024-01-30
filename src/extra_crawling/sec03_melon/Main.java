@@ -21,5 +21,7 @@ public class Main {
 			MelonChartService melonChartService = new MelonChartService();
 			List<MelonChart> list = melonChartService.getBestMusic();
 			list.forEach(x -> System.out.println(x));
+			
+			//object형태로 해서 찍어내보기 -> csv형태
 	}
 }

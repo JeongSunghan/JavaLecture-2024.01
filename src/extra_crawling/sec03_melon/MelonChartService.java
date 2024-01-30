@@ -11,7 +11,7 @@ import org.jsoup.select.Elements;
 
 public class MelonChartService {
 
-	public List<MelonChart> getBestMusic() throws IOException {
+	public static List<MelonChart> getBestMusic() throws IOException {		//static 뺴야
 		String url = "https://www.melon.com/chart/index.htm";
 		Document doc = Jsoup.connect(url).get();
 		Elements trs = doc.select(".service_list_song.type02.d_song_list > table > tbody > tr");
