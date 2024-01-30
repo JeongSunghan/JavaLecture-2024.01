@@ -18,10 +18,7 @@ public class CsvMain {
 		for (MelonChart mc : list) {
 			List<String> line = new ArrayList<String>();
 			line.add(mc.getRank() + "");
-			line.add(mc.getTitle());
-			line.add(mc.getArtist());
-			line.add(mc.getAlbum());
-			line.add(mc.getImgSrc() + "");
+			line.add(mc.getTitle()); line.add(mc.getArtist()); line.add(mc.getAlbum()); line.add(mc.getImgSrc() + "");
 			csvList.add(line);
 		}
 		csvUtil.writeCsv("c:/Temp/melonchart.tsv", csvList, "\t");

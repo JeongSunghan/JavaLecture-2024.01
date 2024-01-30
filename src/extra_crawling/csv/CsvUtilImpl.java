@@ -41,12 +41,10 @@ public class CsvUtilImpl implements CsvUtil {
 					continue;
 				String[] lineArray = line.split(separator);
 				csvList.add(Arrays.asList(lineArray));
-				// 리스트로 만들어주는 코드
-
 //				List<String> lineList = new ArrayList<String>();
-//				for (String word:lineArray)
+//				for (String word: lineArray)
 //					lineList.add(word);
-//				csvList.add(lineList);		위에 코드를 풀어쓴 것
+//				csvList.add(lineList);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

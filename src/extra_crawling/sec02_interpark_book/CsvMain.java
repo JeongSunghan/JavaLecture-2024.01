@@ -15,12 +15,10 @@ public class CsvMain {
 
 		List<InterparkBook> list = interparkBookService.getBestSeller();
 		List<List<String>> csvList = new ArrayList<List<String>>();
-		for (InterparkBook ib : list) {
+		for (InterparkBook ib: list) {
 			List<String> line = new ArrayList<String>();
 			line.add(ib.getRank() + "");
-			line.add(ib.getTitle());
-			line.add(ib.getAuthor());
-			line.add(ib.getCompany());
+			line.add(ib.getTitle()); line.add(ib.getAuthor()); line.add(ib.getCompany());
 			line.add(ib.getPrice() + "");
 			csvList.add(line);
 		}
