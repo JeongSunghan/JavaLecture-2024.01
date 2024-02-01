@@ -67,9 +67,7 @@ SELECT * FROM city
 SELECT * FROM city WHERE countrycode = 'KOR' AND
     population >= 500000 AND population <= 1000000;
 
-SELECT * FROM city 
-    WHERE countrycode = 'KOR' 
-    AND population between 500000 AND 1000000;
+SELECT * FROM city WHERE countrycode = 'KOR' AND population between 500000 AND 1000000;
 
 # 충청남북도의 도시
 SELECT * FROM city WHERE district = "Chungchongbuk" or district = 'Chungchongnam';
@@ -248,4 +246,3 @@ SELECT r.Name countryName, l.Name cityName, l.Population, o.`Language` FROM city
 	WHERE r.Continent='Asia' AND o.IsOfficial='T'
 	ORDER BY l.Population DESC 
 	LIMIT 10;
-
