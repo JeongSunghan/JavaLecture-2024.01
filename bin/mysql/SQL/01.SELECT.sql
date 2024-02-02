@@ -67,7 +67,9 @@ SELECT * FROM city
 SELECT * FROM city WHERE countrycode = 'KOR' AND
     population >= 500000 AND population <= 1000000;
 
-SELECT * FROM city WHERE countrycode = 'KOR' AND population between 500000 AND 1000000;
+SELECT * FROM city 
+    WHERE countrycode = 'KOR' 
+    AND population between 500000 AND 1000000;
 
 # 충청남북도의 도시
 SELECT * FROM city WHERE district = "Chungchongbuk" or district = 'Chungchongnam';
@@ -201,6 +203,13 @@ SELECT countrycode, ROUND(AVG (population)) AS avgPop FROM city
 
 
 /* 1-7. Join */
+-- 여러개의 테이블을 건들 때
+/*
+LEFT JOIN, RIGHT JOIN
+INNER JOIN = 교집합
+FULL OUTER JOIN = 합집합
+
+*/
 # 인구수가 800만 보다 큰 도시의 국가명, 도시명, 인구수
 SELECT country.Name, city.Name, city.population FROM city 
     INNER JOIN country      --INNER는 생략가능
@@ -246,3 +255,39 @@ SELECT r.Name countryName, l.Name cityName, l.Population, o.`Language` FROM city
 	WHERE r.Continent='Asia' AND o.IsOfficial='T'
 	ORDER BY l.Population DESC 
 	LIMIT 10;
+
+
+/* 1-8. Sub Query */
+#국내 도시만으로 새로운 테이블을 만드는 경우
+CREATE talble IF NOT EXISTS kcity LIKE city; -- 테이블 만들기
+INSERT INTO kcity
+    SELECT * FROM city WHERE countrycode = 'KOR';
+
+
+    -- values(default, )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 필기용
+
+검색어 : 검색
+
+게시판
+
+SELECT * FROM board WHERE title LIKE '%검색%'
+
+SELECT * FROM board
+ORDER BY bid DESC
+LIMIT 20 OFFSET 40;
