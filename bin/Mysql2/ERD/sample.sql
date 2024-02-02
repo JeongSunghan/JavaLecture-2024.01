@@ -17,6 +17,7 @@ CREATE TABLE addrBook
 	tel varchar(16),
 	email varchar(32),
 	birthDay date,
+	uid varchar(12) NOT NULL,
 	PRIMARY KEY (aid)
 );
 
@@ -31,6 +32,17 @@ CREATE TABLE users
 	isDeleted int DEFAULT 0,
 	PRIMARY KEY (uid)
 );
+
+
+
+/* Create Foreign Keys */
+
+ALTER TABLE addrBook
+	ADD FOREIGN KEY (uid)
+	REFERENCES users (uid)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+;
 
 
 

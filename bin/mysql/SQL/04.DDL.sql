@@ -23,14 +23,55 @@ CREATE TABLE addrBook (
 	PRIMARY KEY (aid)
 );
 
--- 사용자 테이블 필기
-/* 사용자(users)
-    uid =  
-    pwd = 
-    uname =
-    regDate = 
-    isDeleted =
+#사용자(users) 테이블 생성
+CREATE TABLE users (
+	uid varchar(12) NOT NULL,
+	pwd char(60) NOT NULL,
+	uname varchar(16) NOT NULL,
+	email varchar(32),
+	regDate date DEFAULT (CURRENT_DATE),
+	isDeleted int DEFAULT 0,
+	PRIMARY KEY (uid)
+);
 
 
 
-*/
+
+/* 2. 테이블 조회 */
+-- SHOW 사용
+
+# 데이터베이스 내의 테이블 목록
+SHOW TABLES
+
+# 테이블 구조 
+DESC users;                 -- #describe
+
+
+/* 3. 테이블 삭제 */
+-- DROP 사용
+
+#largeCity 삭제
+drop view largeCity 
+
+# dateTable 삭제
+drop TABLE dateTable;
+
+# kcity 테이블의 모든 데이터 삭제
+-- truncate : 전부삭제(추천안함)
+-- 테이블 구조는 남기지만 정보를 모두 삭제
+truncate kcity;
+
+
+/* 4. 테이블 이름 변경 */
+RENAME TABLE kcity TO korCity;
+
+/* 5. 테이블 구조 변경 */
+# users 테이블에서 email 뒤에 tel 추가
+ALTER TABLE users
+    ADD tel VARCHAR(16) NOT NULL AFTER email;
+    -- tel만적으면 안되고 type도 적어야함
+    -- Af(After)
+
+# users 테이블에서 tel의 not null을 제거
+ALTER TABLE users
+    CHANGE tel tel VARCHAR(16)
