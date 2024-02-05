@@ -29,8 +29,8 @@ public class Ex04_Properties {
 	}
 
 	//국내 테이블 생성
-	CREATE TABLE if NOT EXISTS kcity like city
-	INSERT INTO kcity
-	SELECT * FROM city WHERE countrycode = 'KOR'
+//	CREATE TABLE if NOT EXISTS kcity like city
+//	INSERT INTO kcity
+//	SELECT * FROM city WHERE countrycode = 'KOR'
 
 }
