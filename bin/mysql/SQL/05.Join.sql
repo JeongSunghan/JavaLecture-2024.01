@@ -70,7 +70,7 @@ ON l.sid = r.hit_song_id;
 # Full outer join   - MySql에서는 Left join 과 Right join을 union(합집합)
 SELECT r.name, r.debut, l.title, l.lyrics FROM song l
 	LEFT OUTER JOIN girl_group r               
-	ON l.sid = r.hit_song_id;
+	ON l.sid = r.hit_song_id
 UNION
 SELECT r.name, r.debut, l.title, l.lyrics FROM song l
 RIGHT OUTER JOIN girl_group r               
