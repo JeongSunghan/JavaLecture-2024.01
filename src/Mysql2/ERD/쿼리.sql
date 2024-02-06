@@ -1,2 +1,1 @@
-
-SELECT * FROM kcity WHERE countrycode = 'KOR'
+SELECT * FROM message;
