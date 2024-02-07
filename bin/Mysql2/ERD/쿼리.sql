@@ -1,1 +1,1 @@
-SELECT * FROM girl_group
+SELECT * FROM message;

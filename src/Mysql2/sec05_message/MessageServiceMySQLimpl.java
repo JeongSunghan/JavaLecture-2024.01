@@ -4,6 +4,7 @@ import java.util.List;
 
 public class MessageServiceMySQLimpl implements MessageService {
 	private MessageDao msgDao = new MessageDao();
+	// => @Autowired private Mesaage msgDao;
 
 	@Override
 	public Message findByMid(int mid) {

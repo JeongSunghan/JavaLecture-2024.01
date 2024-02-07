@@ -61,6 +61,10 @@ public class MessageDao {
 //	            LocalDateTime dateTime = LocalDateTime.parse(timeStr, formatter);
 //	            ms.setModTime(dateTime);
 				msg.setIsDeleted(rs.getInt(5));
+				
+				
+				//2024-02-07 09:24:30 db조회결과
+				//LocalDateTime.parse("2024-02-07T09:24:30)
 			}
 			rs.close(); pstmt.close();
 		}catch (Exception e) {

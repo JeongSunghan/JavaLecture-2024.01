@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MessageMain {
-	private static MessageService messageService = null;
+	//어플리케이션의 기본(?)
+	private static MessageService messageService = new MessageServiceMySQLimpl();
+	// => @Autowired private MessageService 
 	private static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {

@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="C:/Users/human-12/Downloads/jsoup-1.17.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/human-12/Downloads/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/human-12/Downloads/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/human-12/Downloads/jbcrypt-0.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -17,4 +17,5 @@ public interface MessageService {
 	
 	void deleteMessage(int mid);
 	
+	//앱은 dao가 아닌 interface method를 사용
 }
