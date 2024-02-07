@@ -1,4 +1,4 @@
-package Mysql2.ERD.sec04_girl_group;
+package Mysql2.sec04_girl_group;
 
 import java.time.LocalDate;
 

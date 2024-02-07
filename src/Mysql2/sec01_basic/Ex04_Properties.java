@@ -1,4 +1,4 @@
-package Mysql2.ERD.sec01_basic;
+package Mysql2.sec01_basic;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

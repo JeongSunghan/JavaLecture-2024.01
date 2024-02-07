@@ -1,1 +1,1 @@
-SELECT * FROM users ORDER BY regDate DESC, uid;
+SELECT * FROM board 

@@ -1,4 +1,4 @@
-package Mysql2.ERD.sec03_song;
+package Mysql2.sec03_song;
 
 
 import java.io.FileInputStream;

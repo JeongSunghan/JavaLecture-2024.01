@@ -22,6 +22,11 @@ public class UserServiceMySQLImpl implements UserService {
 
 	@Override
 	public void registerUser(User user) {	//user는 아직 암호화된 패스워드가 없다고 가정
+		//uid 중복확인 코드
+		User u = userDao.getUserByUid(user.getUid());
+		if (u != null)
+			return;	
+		
 		String hashedPwd = BCrypt.hashpw(user.getPwd(), BCrypt.gensalt());
 		user.setPwd(hashedPwd);
 		userDao.insertUser(user);
@@ -29,13 +34,12 @@ public class UserServiceMySQLImpl implements UserService {
 
 	@Override
 	public void updateUser(User user) {
-		// TODO Auto-generated method stub
-		
+		userDao.updateUser(user);
 	}
 
 	@Override
 	public void deleteUser(String uid) {
-		// TODO Auto-generated method stub
+		userDao.deleteUser(uid);
 		
 	}
 
@@ -51,7 +55,7 @@ public class UserServiceMySQLImpl implements UserService {
 
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
+		userDao.close();
 		
 	}
 

@@ -1,4 +1,4 @@
-package Mysql2.ERD.sec02_kcity;
+package Mysql2.sec02_kcity;
 
 import java.io.FileInputStream;
 import java.sql.Connection;

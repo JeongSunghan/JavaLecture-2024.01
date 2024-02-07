@@ -1,4 +1,4 @@
-package Mysql2.ERD.sec02_kcity;
+package Mysql2.sec02_kcity;
 
 /**
  * City DTO(Data Transfer Object), VO(Value Object)
