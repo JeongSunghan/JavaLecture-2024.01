@@ -21,7 +21,7 @@ public class UserDao {
 	private Connection conn;
 	
 	public UserDao() {
-		String path = "C:/Workspace/Java/lesson/src/Mysql2/SQL/Mysql.properties";
+		String path = "C:/Workspace/Java/lesson/src/Mysql2/sec07_bbs/Mysql.properties";
 		try {
 			Properties prop = new Properties();
 			prop.load(new FileInputStream(path));

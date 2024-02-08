@@ -30,7 +30,7 @@ CREATE TABLE board
 
 CREATE TABLE reply
 (
-	rid int NOT NULL,
+	rid int NOT NULL AUTO_INCREMENT,
 	comment varchar(256) NOT NULL,
 	regTime datetime DEFAULT CURRENT_TIMESTAMP,
 	uid varchar(12) NOT NULL,

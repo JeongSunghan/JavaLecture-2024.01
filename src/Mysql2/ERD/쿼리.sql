@@ -1,1 +1,1 @@
-SELECT * FROM board 
+SELECT * FROM reply;
