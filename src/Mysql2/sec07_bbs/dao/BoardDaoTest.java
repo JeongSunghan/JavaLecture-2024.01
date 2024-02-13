@@ -32,7 +32,7 @@ public class BoardDaoTest {
 //		b = new Board("제목 15", "본문 15", "brian");
 //		bDao.insertBoard(b);
 		
-		List<Board> list = bDao.getBoardsList("title", "%", 20, 0);
+		List<Board> list = bDao.getBoardList("title", "%", 20, 0);
 		list.forEach(x -> System.out.println(x.listForm()));
 		System.out.println("==============================");
 		

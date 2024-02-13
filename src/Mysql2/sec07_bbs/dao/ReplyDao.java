@@ -43,39 +43,32 @@ public class ReplyDao {
 			e.printStackTrace();
 		}
 	}
-
-	public Reply getReply(int rid) {
-
-		return null;
-	}
-
 	public List<Reply> getReplyList(int bid) {
 		String sql = "SELECT r.*, u.uname FROM reply r"
-				+ "	JOIN users u ON r.uid=u.uid"
-				+ "	WHERE r.bid=?"
-				+ "	ORDER BY rid";
-		List<Reply>	list = new ArrayList<Reply>();
-			try {
-				PreparedStatement pstmt = conn.prepareStatement(sql);
-				pstmt.setInt(1, bid);
-				
-				ResultSet rs = pstmt.executeQuery();
-				while (rs.next()) {
-					Reply r = new Reply(rs.getInt(1), rs.getString(2),
+					+ "	JOIN users u ON r.uid=u.uid"
+					+ "	WHERE r.bid=?"
+					+ "	ORDER BY rid";
+		List<Reply> list = new ArrayList<Reply>();
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, bid);
+			
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				Reply r = new Reply(rs.getInt(1), rs.getString(2),
 							LocalDateTime.parse(rs.getString(3).replace(" ", "T")),
 							rs.getString(4), rs.getInt(5), rs.getString(6));
-					
-					list.add(r);
-				}				
-				rs.close(); pstmt.close();
-			} catch (Exception e) {
-				e.printStackTrace();
+				list.add(r);
 			}
+			rs.close(); pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return list;
 	}
 	
 	public void insertReply(Reply reply) {
-		String sql = "INSERT INTO reply VALUES (DEFAULT, ?, DEFAULT, ?, ?)";
+		String sql = "insert into reply values (default, ?, default, ?, ?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, reply.getComment());
@@ -84,10 +77,9 @@ public class ReplyDao {
 			
 			pstmt.executeUpdate();
 			pstmt.close();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
+
 }
